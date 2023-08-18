@@ -24,13 +24,13 @@ sync;fio --randrepeat=1 --ioengine=libaio --direct=1 --gtod_reduce=1 --name=test
 ### Sequential write test for throughput, i.e. one large file
 
 ```shell
-sync;fio --randrepeat=1 --ioengine=libaio --direct=1 --gtod_reduce=1 --name=test --filename=test --bs=4M --iodepth=64 --size=4G --readwrite=write --ramp_time=4
+sync;fio --randrepeat=1 --ioengine=libaio --direct=1 --gtod_reduce=1 --name=test --filename=test --bs=4M --iodepth=1 --size=4G --readwrite=write --ramp_time=4
 ```
 
 ### Sequential Read test for throughput, i.e. one large file
 
 ```shell
-sync;fio --randrepeat=1 --ioengine=libaio --direct=1 --gtod_reduce=1 --name=test --filename=test --bs=4M --iodepth=64 --size=4G --readwrite=read --ramp_time=4
+sync;fio --randrepeat=1 --ioengine=libaio --direct=1 --gtod_reduce=1 --name=test --filename=test --bs=4M --iodepth=1 --size=4G --readwrite=read --ramp_time=4
 ```
 
 ## VM Export / Import
